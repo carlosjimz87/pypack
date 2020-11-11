@@ -18,7 +18,3 @@ def find_palindroms_str(input):
         isPal = ''
 
     return pals
-
-
-r = find_palindroms_str("abc")
-print(r)

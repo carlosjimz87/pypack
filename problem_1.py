@@ -2,17 +2,17 @@
 
 def find_bishops_diagonals(bishops):
     if not bishops or not bishops[0]:
-        return []
+        raise Exception("Empty list of bishops")
 
     import math
     counter = 0
-
+    seen = set()
     for index, (i, j) in enumerate(bishops):
         for (x, y) in bishops[index+1:]:
-            if math.fabs(i-x) == math.fabs(j-y):
+            diag1 = math.fabs(i-x)
+            diag2 = math.fabs(j-y)
+            if (diag1 == diag2):
                 counter += 1
+                if counter == len(bishops)*2:
+                    return counter
     return counter
-
-
-bishops = [(0, 0), (1, 2), (2, 2), (4, 0)]
-print(find_bishops_diagonals(bishops))
