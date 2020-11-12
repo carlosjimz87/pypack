@@ -28,5 +28,5 @@ problems.find_palindroms_str("racecarannakayak")
 To install the problems, along with the tools you need to develop and run tests, run the following in your virtualenv:
 
 ```
-pip install -e .[dev] & pytest -v
+pip install -e .[dev] && pytest -v
 ```
