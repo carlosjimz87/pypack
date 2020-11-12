@@ -2,12 +2,11 @@
 import os
 import sys
 from sys import argv
-from exceptions import InvalidInput
+from . import helpers
 
 
-def find_palindroms_str(input: str):
-    if not isinstance(input, str):
-        raise InvalidInput("Input must be str")
+def palindromes_problem(input: str):
+    input = helpers.validateStr(input)
 
     isPal = ''
     pals = []
@@ -33,7 +32,7 @@ def main():
         os.system('python test_{} -v'.format(argv[0]))
     else:
         for arg in sys.argv[1:]:
-            print(find_palindroms_str(input=arg))
+            print(palindromes_problem(input=arg))
 
 
 if __name__ == "__main__":
