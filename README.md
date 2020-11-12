@@ -30,3 +30,5 @@ To install the problems, along with the tools you need to develop and run tests,
 ```
 pip install -e .[dev] && pytest -v
 ```
+
+Thanks!
