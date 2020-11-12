@@ -8,7 +8,7 @@ Run the following to install:
 
 ```
 python -m pip install --upgrade pip
-pip install git+https://github.com/carlosjimz87/pyrepo.git --upgrade
+pip install git+https://github.com/carlosjimz87/pyrepo.git@restructured --upgrade
 ```
 
 ## Usage
