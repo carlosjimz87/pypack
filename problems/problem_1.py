@@ -7,7 +7,7 @@ from . import helpers
 from typing import List, Tuple
 
 
-def find_bishops_diagonals(bishops: List[Tuple[int, int]]):
+def bishops_problem(bishops: List[Tuple[int, int]]):
     bishops = helpers.validateList(bishops)
 
     counter = 0
@@ -28,7 +28,7 @@ def main():
         os.system('python test_{} -v'.format(argv[0]))
     else:
         bishops = helpers.parse(sys.argv[1:])
-        print(find_bishops_diagonals(bishops=bishops))
+        print(bishops_problem(bishops=bishops))
 
 
 if __name__ == "__main__":

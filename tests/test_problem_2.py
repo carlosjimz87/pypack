@@ -1,22 +1,22 @@
 import unittest
-from .context import src
+from .context import problems
 
 
 class TestProblem2(unittest.TestCase):
 
-    def test_find_palindroms_abc(self):
-        result = src.find_palindroms_str("abc")
+    def test_palindromes_problem_abc(self):
+        result = problems.palindromes_problem("abc")
         match = ['a', 'b', 'c']
         self.assertListEqual(result, match)
 
-    def test_find_palindroms_racerannakayak(self):
-        result = src.find_palindroms_str("racecarannakayak")
+    def test_palindromes_problem_racerannakayak(self):
+        result = problems.palindromes_problem("racecarannakayak")
         match = ['racecar', 'anna', 'kayak']
         self.assertListEqual(result, match)
 
-    def test_find_palindroms_noneinput(self):
+    def test_palindromes_problem_noneinput(self):
         with self.assertRaises(Exception):
-            src.find_palindroms_str(None)
+            problems.palindromes_problem(None)
 
 
 if __name__ == '__main__':
