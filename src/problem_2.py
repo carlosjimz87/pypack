@@ -2,12 +2,11 @@
 import os
 import sys
 from sys import argv
-from exceptions import InvalidInput
+from . import helpers
 
 
 def find_palindroms_str(input: str):
-    if not isinstance(input, str):
-        raise InvalidInput("Input must be str")
+    input = helpers.validateStr(input)
 
     isPal = ''
     pals = []
