@@ -1,15 +1,13 @@
 
-import os
-import sys
 import math
-from sys import argv
+import sys
 from . import helpers
 from typing import List, Tuple
 
 
 def bishops_problem(bishops: List[Tuple[int, int]]):
-    bishops = helpers.validateList(bishops)
-
+    ''' The Bishops problem method '''
+    bishops = helpers.validate_list_of_tuples(bishops)
     counter = 0
     for index, (i, j) in enumerate(bishops):
         for (x, y) in bishops[index+1:]:
@@ -22,14 +20,6 @@ def bishops_problem(bishops: List[Tuple[int, int]]):
     return counter
 
 
-def main():
-    if "run_tests" == sys.argv[1]:
-        print('Running tests...')
-        os.system('python test_{} -v'.format(argv[0]))
-    else:
-        bishops = helpers.parse(sys.argv[1:])
-        print(bishops_problem(bishops=bishops))
-
-
 if __name__ == "__main__":
-    main()
+    bishopsList = helpers.parse_args(sys.argv, helpers.PROBLEMS.BISHOPS)
+    print(bishops_problem(bishopsList=bishopsList))
