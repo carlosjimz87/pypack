@@ -17,10 +17,10 @@ pip install git+https://github.com/carlosjimz87/pyrepo.git@restructured --upgrad
 python import problems
 
 # Bishops problem
-problems.find_bishops_diagonals([(0, 0), (2, 2), (1, 1)])
+problems.bishops_problem([(0, 0), (2, 2), (1, 1)])
 
 # Palindromes problem
-problems.find_palindroms_str("racecarannakayak")
+problems.palindromes_problem("racecarannakayak")
 ```
 
 # Development & Test
